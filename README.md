@@ -538,3 +538,4 @@ await client.connection.connect();
 
 Отдельная благодарность @dmitrytemlead за возможность протестировать библиотеку в стороннем проекте
 "# AmoCRM" 
+"# AmoCRM" 
