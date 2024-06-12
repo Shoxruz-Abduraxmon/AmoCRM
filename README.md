@@ -537,3 +537,4 @@ await client.connection.connect();
 Спасибо @amorev, @maxism, @shuraman69, @korovenko-tatyana, @lotgyero, @capfsb, @templar820 за вклад в разработку этого проекта
 
 Отдельная благодарность @dmitrytemlead за возможность протестировать библиотеку в стороннем проекте
+"# AmoCRM" 
