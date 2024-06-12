@@ -1,9 +1,7 @@
 const fs = require('fs');
 const path = require('path');
-// экземпляр Client
 const { client } = require('../client');
 
-// принудительное обновление токена (если ранее не было запросов)
 const updateConnection = async () => {
     if (!client.connection.isTokenExpired()) {
         return;
@@ -19,7 +17,6 @@ const run = async () => {
         const token = client.token.getValue();
         fs.writeFileSync(filePath, JSON.stringify(token));
 
-        // обновление токена по истечению
         const expiresIn = token.expires_in * 1000;
 
         clearTimeout(renewTimeout);
@@ -31,6 +28,5 @@ const run = async () => {
         const currentToken = JSON.parse(json);
         client.token.setValue(currentToken);
     } catch (e) {
-        // Файл не найден, некорректный JSON-токен
     }
 }

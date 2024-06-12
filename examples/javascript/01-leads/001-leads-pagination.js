@@ -3,33 +3,24 @@ const { client } = require('../client');
 
 const run = async () => {
 
-    // постраничная навигация сделок
     const pagination = await client.leads.get();
 
-    // массив объектов Lead на текущей странице
     const leads = pagination.getData();
 
-    // загрузить данные следующей страницы. Возвращает false, если данных нет
     await pagination.next();
 
-    // номер текущей страницы
     const currentPage = pagination.getPage();
 
-    // данные второй страницы
     const leads2 = pagination.getData();
 
-    // другой способ получить массив объектов Lead. Возвращает false, если данных нет
     const leads3 = await pagination.next();
 
     await pagination.next();
 
-    // загрузить данные предыдущей страницы. Возвращает false, если данных нет
     const prevLeads = await pagination.prev();
 
-    // загрузить данные первой страницы. Возвращает false, если данных нет
     await pagination.first();
 
-    // обновить данные на текущей странице. Возвращает false, если данных нет
     const refreshedData = await pagination.refresh();
 
     if (!pagination.hasNext()) {
@@ -48,7 +39,6 @@ const run = async () => {
         page: 2,
         query: 'Иванов'
     };
-    // постраничная навигация сделок
     const pagination2 = await client.leads.get(criteria);
 };
 

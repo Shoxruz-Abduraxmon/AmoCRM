@@ -1,8 +1,3 @@
-/*
-  Так выглядит содержимое токена, который
-  вы получите с помощью OAuth-авторизации
-  Подробнее см. в README и на https://www.amocrm.ru/developers/content/oauth/step-by-step
- */
 
 const token = {
   "token_type": "Bearer",

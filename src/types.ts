@@ -15,7 +15,6 @@ export interface JSONObject {
 
 export type TClientPlugin = (constructors: IClientConstructors) => IClientConstructors;
 
-/* eslint-disable  @typescript-eslint/no-explicit-any */
 export type TConstructor<T> = new (...args: any[]) => T;
 export type TFactoryConstructor<T extends IResourceEntity<IResourceFactory<T>>> = TConstructor<IResourceFactory<T>>;
 export type TEntityConstructor<T extends IResourceFactory<IResourceEntity<T>>> = TConstructor<IResourceEntity<T>>;

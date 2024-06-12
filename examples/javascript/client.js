@@ -9,6 +9,5 @@ const client = new Client({
         redirect_uri: 'redirect_uri'
     }
 });
-// Устанавливаем токен
 client.token.setValue(token);
 export default client;
